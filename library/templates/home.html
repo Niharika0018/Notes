@@ -1,0 +1,17 @@
+{% extends 'header.html' %}
+
+{% block content %}
+
+<h1>NOTES!</h1>
+<div class="row">
+	    {% for i in list %}
+		<div class="card" style="width: 350px; margin: 8px;">
+		  <div class="card-body">
+		    <h5 class="card-title">{{i.title}}</h5>
+		    <h6 class="card-subtitle mb-2 text-muted">{{i.date}}</h6>
+		    <p class=" - 4-text">{{i.description}}</p>
+		  </div>
+		</div>
+		{% endfor %}
+</div>
+{% endblock %}
